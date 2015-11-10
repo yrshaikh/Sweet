@@ -1,0 +1,2 @@
+C:\SVN HOME 2\YASSER\One\obj\Debug\One.njsprojResolveAssemblyReference.cache
+C:\SVN HOME 2\YASSER\One\bin\Microsoft.NodejsTools.WebRole.dll

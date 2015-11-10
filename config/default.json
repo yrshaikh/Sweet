@@ -1,0 +1,14 @@
+﻿{
+    "mongodb": { 
+        "url": "mongodb://localhost/one"
+    },
+    "mailSettings": {
+        "service": "Gmail",
+        "user": "oneninja.notifications@gmail.com",
+        "pass": "qwedsa@123",
+        "from": "notifications.oneninja@gmail.com",
+        "mailSubjects": {
+            "forgotPassword": "OneNinja - Forgot Password"
+        }
+    }
+}

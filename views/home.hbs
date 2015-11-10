@@ -1,0 +1,7 @@
+﻿{{#if user}}
+    <p>Hello {{user.firstname}} {{user.lastname}} !</p>
+    <a href="/sign-out">sign out</a>    
+{{else}}
+    <a href="/sign-in">Login</a>
+    <a href="/register">Register</a>
+{{/if}}
