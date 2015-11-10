@@ -3,11 +3,19 @@
   <head>
     <title>{{title}}</title>
     <script type="text/javascript" src="/javascripts/angular.min.1.4.6.js"></script>
+    <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
     <link rel='stylesheet' href='/stylesheets/base.css' />
   </head>
   <body>
-    {{> header}}
-    {{{body}}}
-    {{> footer}}
+    {{#if user}}
+      {{> header}}
+    {{/if}}
+    <div class="container">
+      {{{body}}}
+    </div>
+
+    {{#if user}}
+      {{> footer}}
+    {{/if}}
   </body>
 </html>

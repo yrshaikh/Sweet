@@ -7,9 +7,12 @@
 ***********************************************************/
 
 /* 1. FONTS ***********************************************/
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,500);
-body, button, input, h1, h2, h3, h4, h5, h6 {font-family: 'Roboto', 'Segoe UI', Tahoma, Arial, sans-serif !important;}
+/*@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,500);*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic);
+body, button, input, h1, h2, h3, h4, h5, h6 {font-family: 'Open Sans', 'Segoe UI', Tahoma, Arial, sans-serif !important;}
+.form-control {font-size: 13px;color: #333;}
 
 /* 2. COMMON **********************************************/
 html, body, input {font-size: 12px;}
 .body-content{ margin-top: 60px;}
+.checkbox input[type=checkbox] {margin-top: 2px;}

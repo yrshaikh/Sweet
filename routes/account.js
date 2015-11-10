@@ -14,7 +14,7 @@ router.get('/', staticFunctions.isAuthenticated, function (req, res) {
 });
 
 router.get('/register', function (req, res) {
-    res.render('account/register', {});
+    res.render('account/register', { layout: false });
 });
 
 router.post('/register', function (req, res) {
@@ -45,6 +45,7 @@ router.post('/sign-in', passport.authenticate('local'), function (req, res) {
 
 router.get('/sign-out', function (req, res) {
     req.logout();
+    req.session.destroy();
     res.redirect('/');
 });
 
