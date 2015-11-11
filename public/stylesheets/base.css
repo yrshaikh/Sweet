@@ -9,10 +9,34 @@
 /* 1. FONTS ***********************************************/
 /*@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,500);*/
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic);
-body, button, input, h1, h2, h3, h4, h5, h6 {font-family: 'Open Sans', 'Segoe UI', Tahoma, Arial, sans-serif !important;}
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+body, button, input, h1, h2, h3, h4, h5, h6 {font-family: 'Montserrat', 'Open Sans', 'Segoe UI', Tahoma, Arial, sans-serif !important;}
 .form-control {font-size: 13px;color: #333;}
 
 /* 2. COMMON **********************************************/
 html, body, input {font-size: 12px;}
 .body-content{ margin-top: 60px;}
 .checkbox input[type=checkbox] {margin-top: 2px;}
+label {font-weight: normal;}
+.dropdown-menu>li>a {font-size: 12px;}
+
+/* 3 LAYOUTS *********************************************/
+body {padding-top: 50px;}
+.sub-header {padding-bottom: 10px;border-bottom: 1px solid #eee;}
+.navbar-fixed-top {border: 0;}
+.sidebar {display: none;}
+@media (min-width: 768px) {
+  .sidebar {position: fixed;top: 51px;bottom: 0;left: 0;z-index: 1000;display: block;padding: 20px;
+    overflow-x: hidden;overflow-y: auto;background-color: #f5f5f5;border-right: 1px solid #eee;}
+}
+
+.nav-sidebar {margin-right: -21px;margin-bottom: 20px;margin-left: -20px;}
+.nav-sidebar > li > a {padding-right: 20px;padding-left: 20px;}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {color: #fff;background-color: #428bca;}
+.main {padding: 20px;}
+@media (min-width: 768px) {
+  .main {padding-right: 40px;padding-left: 40px;}
+}
+.main .page-header {margin-top: 0;}

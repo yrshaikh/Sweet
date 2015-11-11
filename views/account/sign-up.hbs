@@ -1,0 +1,61 @@
+﻿<link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+<link rel='stylesheet' href='/stylesheets/base.css' />
+<link rel='stylesheet' href='/stylesheets/signin.css' />
+<div class="container">
+	<div class="row single-pg">
+		<div class="col-md-8 msg">
+			<div class="logo">
+				<img src="/stylesheets/images/logo.png" />
+			</div>
+			<h3>Simple, effective project management webapp for fast moving teams.</h3>
+			<div class="features">
+				<ul>
+					<li>Simple</li>
+					<li>Fast</li>
+					<li>Beautiful</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">Sign Up</h3>
+			  </div>
+			  <div class="panel-body">
+			  	{{account}}
+			    <form action="/sign-up" method="post" class="form-register" >
+				    <div class="input">
+				    	<label for="username">First Name</label>
+				    	<input type="textbox" name="firstname" class="form-control" required autofocus tabindex="1" value="{{account.firstname}}">
+				    </div>
+				    <div class="input">
+				    	<label for="password">Last Name</label>
+				    	<input type="textbox" name="lastname" class="form-control" required  tabindex="2" value="{{account.lastname}}">	
+				    </div>
+				    <div class="input">
+				    	<label for="username">Email address</label>
+				    	<input type="textbox" name="username" class="form-control" required autofocus tabindex="3" value="{{account.username}}">
+				    </div>
+				    <div class="input">
+				    	<label for="password">Password</label>
+				    	<input type="password" name="password" class="form-control" required  tabindex="4">	
+				    </div>
+				    {{#if account.error}}
+					  	<div class="error text-danger">
+		    				Oops! This is embarassing, something went wrong. Please try again.
+			    		</div>
+					{{/if}}
+				    <div class="buttons">
+				    	<button class="btn btn-success pull-left" type="submit" tabindex="5">Sign up</button>	    
+				    	<span class="pull-right other-links">
+				    		<label>
+				    			I already have an account. &nbsp;<a href="/sign-in" class="pull-right" tabindex="4">Sign in</a>
+				    		</label>
+				    	</span>						
+					</div>			    
+				</form>				
+			  </div>
+			</div>		
+		</div>
+	</div>
+</div>

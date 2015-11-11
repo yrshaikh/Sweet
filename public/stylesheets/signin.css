@@ -5,11 +5,12 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
+.btn {text-transform: uppercase;}
 .single-pg {margin-top: 105px;}
 .single-pg .logo img {margin: 0 auto;height: 54px;display: block;}
 .single-pg .msg {color:#fff;margin-top: 60px;}
 .single-pg .msg h3 {font-size: 22px;text-align: center;}
-.single-pg .msg .features ul {font-size: 18px;color: #FFC10F;text-align: center;}
+.single-pg .msg .features ul {font-size: 18px;color: #FFC10F;text-align: center;margin-left: 40px;}
 .single-pg .msg .features ul li {float: left;margin-left: 10px;list-style: none;}
 .single-pg .msg .features ul li:after {content: '\00B7';margin-left: 10px;}
 .single-pg .msg .features ul li:last-child:after {content: none;margin-left: 10px;}
@@ -17,4 +18,7 @@ body {
 .form-signin {max-width: 330px;padding: 15px;margin: 0 auto;}
 .form-signin .username {margin-top: -10px;}
 .form-signin .password {margin-top: 15px;}
-.form-signin .buttons {margin-top: 15px;}
+.form-signin .error, .form-register .error {margin-top: 10px;}
+.form-register .buttons, .form-signin .buttons {margin-top: 15px;}
+.form-register .other-links, .form-signin .other-links {margin-top:7px;}
+.form-register .input {margin-top: 10px;}

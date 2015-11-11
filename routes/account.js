@@ -13,33 +13,41 @@ router.get('/', staticFunctions.isAuthenticated, function (req, res) {
     res.render('home', { user : req.user });
 });
 
-router.get('/register', function (req, res) {
-    res.render('account/register', { layout: false });
+router.get('/sign-up', function (req, res) {
+    res.render('account/sign-up', { layout: false });
 });
 
-router.post('/register', function (req, res) {
+router.post('/sign-up', function (req, res) {
+    var account = {
+                username: req.body.username,
+                password: req.body.password,
+                firstname: req.body.firstname,
+                lastname: req.body.lastname
+            };
+
     Account.register(new Account(
         {
             id: uuid.v1(),
-            username : req.body.username,
-            firstname: req.body.firstname,
-            lastname: req.body.lastname
-        }), req.body.password, function (err, account) {
-        if (err) {
-            account.error = true;
-            return res.render('account/register', { account : account });
-        }
-        passport.authenticate('local')(req, res, function () {
-            res.redirect('/');
-        });
+            username : account.username,
+            firstname: account.firstname,
+            lastname: account.lastname
+        }), account.password, function (err, account) {
+            if (err) {            
+                account.error = true;
+                return res.render('account/sign-up', { account : account });
+            }
+            passport.authenticate('local')(req, res, function () {
+                res.redirect('/');
+            });
     });
 });
 
 router.get('/sign-in', function (req, res) {
-    res.render('account/sign-in', { user : req.user });
+    var loginFailed = req.flash('error').length > 0;
+    res.render('account/sign-in', { user : req.user, error: loginFailed });
 });
 
-router.post('/sign-in', passport.authenticate('local'), function (req, res) {
+router.post('/sign-in', passport.authenticate('local', { successRedirect: '/', failureRedirect: '/sign-in', failureFlash: true }), function (err, req, res) {
     res.redirect('/');
 });
 
