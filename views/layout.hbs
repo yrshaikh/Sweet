@@ -5,19 +5,24 @@
     <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
     <script type="text/javascript" src="/javascripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="/javascripts/angular.min.1.4.6.js"></script>
+    <script type="text/javascript" src="/javascripts/angular-ui.js"></script>
+    <script type="text/javascript" src="/javascripts/angular-ui-router.js"></script>
+    <script type="text/javascript" src="/javascripts/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
     <link rel='stylesheet' href='/stylesheets/bootstrap.css' />
     <link rel='stylesheet' href='/stylesheets/base.css' />
+    <link rel='stylesheet' href='/stylesheets/font-awesome-4.4.0/css/font-awesome.min.css' />
   </head>
   <body>
     {{#if user}}
       {{> header}}
-    {{/if}}
-    <div class="container">
-      {{{body}}}
-    </div>
-
-    {{#if user}}
+      <div class="container wrapper-container">
+        {{{body}}}
+      </div>
       {{> footer}}
+    {{else}}
+      <div class="container">
+        {{{body}}}
+      </div>  
     {{/if}}
   </body>
 </html>

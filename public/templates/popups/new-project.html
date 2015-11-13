@@ -1,0 +1,16 @@
+<div class="modal-header">
+    <h3 class="modal-title pull-left">Create a new project</h3>
+    <i ng-click="cancel()" class="fa fa-close pull-right"></i>
+</div>
+<div class="modal-body">
+    <form ng-init="init()">
+      <div class="form-group">
+        <label for="exampleInputEmail1">PROJECT NAME</label>
+        <input type="text" class="form-control" ng-model="project.name">
+      </div>
+      <div class="text-danger">Oops! This is embarassing, something went wrong. Please try again.</div>
+      <button ng-hide="project.saving" type="submit" class="btn btn-success" 
+        ng-click="saveProject();" ng-disabled="!project.name">SAVE PROJECT</button>
+      <button ng-show="project.saving" class="btn btn-success" disabled="disabled">SAVING...</button>
+    </form>
+</div>
