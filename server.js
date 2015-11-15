@@ -14,6 +14,7 @@ var config = require('config');
 
 var routes = require('./routes/account');
 var users = require('./routes/users');
+var projects = require('./routes/projects');
 
 // This code loads all the partial templates in a directory and makes them available by filename
 var hbs = require('hbs');
@@ -54,6 +55,7 @@ app.use(flash());
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/projects', projects);
 
 // passport config
 var Account = require('./models/account');
@@ -63,7 +65,6 @@ passport.deserializeUser(Account.deserializeUser());
 
 // mongoose connect to mongodb
 mongoose.connect(config.get('mongodb.url'));
-
 //Promise.promisifyAll(mongoose.Model);
 //Promise.promisifyAll(mongoose.Model.prototype);
 //Promise.promisifyAll(mongoose.Query.prototype);

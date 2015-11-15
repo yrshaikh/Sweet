@@ -6,9 +6,9 @@
     <form ng-init="init()">
       <div class="form-group">
         <label for="exampleInputEmail1">PROJECT NAME</label>
-        <input type="text" class="form-control" ng-model="project.name">
+        <input type="text" class="form-control" ng-model="project.name" autofocus required="">
       </div>
-      <div class="text-danger">Oops! This is embarassing, something went wrong. Please try again.</div>
+      <div class="text-danger mb10">Oops! This is embarassing, something went wrong. Please try again.</div>
       <button ng-hide="project.saving" type="submit" class="btn btn-success" 
         ng-click="saveProject();" ng-disabled="!project.name">SAVE PROJECT</button>
       <button ng-show="project.saving" class="btn btn-success" disabled="disabled">SAVING...</button>

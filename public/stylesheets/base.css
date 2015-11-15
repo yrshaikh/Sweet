@@ -38,27 +38,25 @@ html, body, input {font-size: 12px;}
 label {font-weight: normal;}
 .dropdown-menu>li>a {font-size: 12px;}
 .footer {margin-left: 43px;margin-top: 40px;border-top: 1px solid #C1C1C1;margin-right: 47px;color: #C1C1C1;padding: 10px;}
+.mb10 {margin-bottom: 10px;}
 
 /* 3 LAYOUTS *********************************************/
 body {padding-top: 50px;}
 .wrapper-container {width: 100%;}
 .navbar {padding-left: 25px;padding-right: 30px;}
 
+/* 4 DIALOGS*********************************************/
+.modal-dialog .modal-header {background: #1F2533;color: #fff;text-transform: uppercase;height: 50px}
+.modal-dialog .modal-header h3  {font-size: 18px;}
+.modal {text-align: center;}
+.modal-dialog {display: inline-block;text-align: left;vertical-align: middle;}
+.modal-dialog .fa-close {top: 4px;position: relative;right: 4px;color: #ddd;}
+.modal-dialog .fa-close:hover {color: #fff;cursor: pointer;}
+.modal-dialog input[type=text] {width: 600px;}
+.modal-dialog .btn {width: 150px;}
+
+/* 5 PROJECTS *********************************************/
 .projects .panel-title {height: 20px;}
 .projects .panel-title .title {font-size: 14px;margin-top: 3px;}
 .projects .panel-title .title .badge {margin-left: 6px;}
 
-.modal-dialog .modal-header {background: #1F2533;color: #fff;text-transform: uppercase;height: 50px}
-.modal-dialog .modal-header h3  {font-size: 18px;}
-.modal {text-align: center;}
-@media screen and (min-width: 768px) { 
-  .modal:before {
-    display: inline-block;
-    vertical-align: middle;
-    content: " ";
-    height: 100%;
-  }
-}
-.modal-dialog {display: inline-block;text-align: left;vertical-align: middle;}
-.modal-dialog .fa-close {top: 4px;position: relative;right: 4px;color: #ddd;}
-.modal-dialog .fa-close:hover {color: #fff;cursor: pointer;}
