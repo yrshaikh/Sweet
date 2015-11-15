@@ -8,7 +8,6 @@ function ProjectService(){}
 ProjectService.prototype.createNewProject = function(name) {
     return projectDataStore.createNewProject(name)
             .then(function(project){
-                console.log("project created", project);
                 return project;
             });
 };

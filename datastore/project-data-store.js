@@ -17,7 +17,6 @@ ProjectDataStore.prototype.createNewProject = function(name){
         name: name,
         createdDate: new Date()
 	});
-
     return newProject.saveAsync();
 }
 

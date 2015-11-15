@@ -5,17 +5,16 @@ var projectServiceJs = require('../services/project/project-service');
 var projectService = new projectServiceJs();
 var promise = require('bluebird');
 
-router.get('/ping', function (req, res) {
-    var name = "first project";
-    projectService.createNewProject(name)
-        .then(function(){
-            console.log("project created");
+// /project/create?name={{projectName}}
+router.post('/create', function (req, res) {
+    var projectName = req.body.name;
+    projectService.createNewProject(projectName)
+        .then(function(createdProject){
+            res.status(200).send(createdProject);
         })
         .catch(function(err){
-            console.log("error occureed", err);
+            res.status(200).send(err);
         });
-
-    res.status(200).send("pongg!");
 });
 
 module.exports = router;
