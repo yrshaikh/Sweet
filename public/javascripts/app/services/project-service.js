@@ -11,6 +11,12 @@ angular.module("project-management").factory('ProjectService', ['$http', functio
                 method: 'POST',
                 data: project
             });
+        },
+        getProjects: function() {
+            return $http({
+                url: '/projects/get',
+                method: 'GET'
+            });
         }
     };
 }]);

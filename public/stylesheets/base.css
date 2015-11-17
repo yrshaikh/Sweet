@@ -39,11 +39,15 @@ label {font-weight: normal;}
 .dropdown-menu>li>a {font-size: 12px;}
 .footer {margin-left: 43px;margin-top: 40px;border-top: 1px solid #C1C1C1;margin-right: 47px;color: #C1C1C1;padding: 10px;}
 .mb10 {margin-bottom: 10px;}
-
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
 /* 3 LAYOUTS *********************************************/
 body {padding-top: 50px;}
 .wrapper-container {width: 100%;}
 .navbar {padding-left: 25px;padding-right: 30px;}
+.navbar-inverse{background:#1F2533;border: none;}
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a{color:#B5B9C5}
 
 /* 4 DIALOGS*********************************************/
 .modal-dialog .modal-header {background: #1F2533;color: #fff;text-transform: uppercase;height: 50px}

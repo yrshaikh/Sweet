@@ -27,4 +27,14 @@ ProjectDataStore.prototype.createNewProject = function(name, createdByUserId){
     return newProject.saveAsync();
 }
 
+ProjectDataStore.prototype.get = function(userId){
+    return Project.findAsync({"users.id": userId})
+            .then(function(projects, err){
+                return projects;
+            })
+            .catch(function(){
+                throw new Error("Error in get() ");
+            });;
+}
+
 module.exports = ProjectDataStore;

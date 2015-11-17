@@ -1,8 +1,23 @@
 angular.module('project-management').controller('DashboardController', 
-	['$scope', '$http', '$modal', function ($scope, $http, $modal) {
+	['$scope', '$http', '$modal', 'ProjectService', function ($scope, $http, $modal, projectService) {
 	
-	$scope.init = function(){		
+	$scope.init = function(){
+		$scope.projects = {
+			data: [],
+			loading: false
+		}
+
+		loadProjects();
 	}
+
+	var loadProjects = function(){
+        $scope.projects.loading = true;
+		projectService.getProjects()
+			.then(function(response){
+                $scope.projects.loading = false;
+				$scope.projects.data = response.data;
+			});
+	};
 
 	$scope.newProject = function(){
 		var modalInstance = $modal.open({

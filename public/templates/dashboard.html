@@ -1,7 +1,7 @@
-<div class="container-fluid">
+<div class="container-fluid" ng-init="init()">
 	<div class="col-md-9">
 		<h3>
-			Let's get started.
+			Hello there, Let's get started.
 		</h3>		
 		<div>
 			<ul>
@@ -16,15 +16,24 @@
 		<div class="panel panel-default projects">
 		  <div class="panel-heading">
 		    <h3 class="panel-title">
-		    	<span class="pull-left title">Your projects<span class="badge">0</span></span>
+		    	<span class="pull-left title">Your projects<span class="badge" ng-if="!projects.loading">{{projects.data.length}}</span></span>
 		    	<span class="pull-right btn btn-success btn-xs" ng-click="newProject();">+ New Project</span>
 		    </h3>
 		  </div>
 		  <div class="panel-body">
-	    	<div>
+            <div ng-if="projects.loading">
+                Loading&nbsp;<i class="fa fa-spin fa-spinner" />
+            </div>
+	    	<div ng-if="projects.data.length == 0 && !projects.loading">
 	    		You don't have any projects yet!<br/>
 	    		<a href="" ng-click="newProject();">Create your first project.</a>
-	    	</div>		
+	    	</div>
+            <div ng-if="projects.data.length > 0" ng-repeat="p in projects.data">
+	    		<span>
+                    <a href="#/projects/{{p.id}}/{{p.name}}">{{p.name}}</a>
+                </span>
+	    	</div>
+
 		  </div><!-- eof panel-body-->
 		</div><!-- eof panel-->
 	</div>      

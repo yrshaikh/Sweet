@@ -18,4 +18,15 @@ router.post('/create', function (req, res) {
         });
 });
 
+router.get('/get', function(req, res){
+    var userId = req.user.id;
+    projectService.get(userId)
+        .then(function(projects){
+            res.status(200).send(projects);
+        })
+        .catch(function(err){
+            res.status(200).send(err);
+        });
+});
+
 module.exports = router;
