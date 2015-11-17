@@ -8,7 +8,8 @@ var promise = require('bluebird');
 // /project/create?name={{projectName}}
 router.post('/create', function (req, res) {
     var projectName = req.body.name;
-    projectService.createNewProject(projectName)
+    var createdByUserId = req.user.id;
+    projectService.createNewProject(projectName, createdByUserId)
         .then(function(createdProject){
             res.status(200).send(createdProject);
         })

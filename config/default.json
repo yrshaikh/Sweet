@@ -1,6 +1,6 @@
 ﻿{
     "mongodb": { 
-        "url": "mongodb://localhost/one"
+        "url": "mongodb://localhost/pm"
     },
     "mailSettings": {
         "service": "Gmail",

@@ -49,11 +49,19 @@ body {padding-top: 50px;}
 .modal-dialog .modal-header {background: #1F2533;color: #fff;text-transform: uppercase;height: 50px}
 .modal-dialog .modal-header h3  {font-size: 18px;}
 .modal {text-align: center;}
-.modal-dialog {display: inline-block;text-align: left;vertical-align: middle;}
+.modal-dialog {display: inline-block;text-align: left;vertical-align: middle;margin-top: -50px;}
 .modal-dialog .fa-close {top: 4px;position: relative;right: 4px;color: #ddd;}
 .modal-dialog .fa-close:hover {color: #fff;cursor: pointer;}
 .modal-dialog input[type=text] {width: 600px;}
 .modal-dialog .btn {width: 150px;}
+@media screen and (min-width: 768px) {
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
 
 /* 5 PROJECTS *********************************************/
 .projects .panel-title {height: 20px;}
