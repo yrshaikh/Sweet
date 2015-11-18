@@ -1,21 +1,22 @@
-angular.module('project-management').controller('DashboardController', 
-	['$scope', '$http', '$modal', 'ProjectService', function ($scope, $http, $modal, projectService) {
-	
+angular.module('project-management').controller('ProjectController',
+	['$scope', '$http', '$modal', 'ProjectService', '$stateParams', function ($scope, $http, $modal, projectService, $stateParams) {
+
 	$scope.init = function(){
-		$scope.projects = {
-			data: [],
-			loading: false
+		var projectId = $stateParams.id;
+
+		$scope.project = {
+			loading: false,
+			data: []
 		}
 
-		loadProjects();
+		getProjectDetails(projectId);
 	}
 
-	var loadProjects = function(){
-        $scope.projects.loading = true;
-		projectService.getAllProjects()
+	var getProjectDetails = function(projectId){
+		projectService.getProjectDetails(projectId)
 			.then(function(response){
-                $scope.projects.loading = false;
-				$scope.projects.data = response.data;
+				$scope.project.loading = false;
+				$scope.project.data = response.data;
 			});
 	};
 

@@ -10,8 +10,20 @@ ProjectService.prototype.createNewProject = function(name, createdByUserId) {
     return projectDataStore.createNewProject(name, createdByUserId);
 };
 
-ProjectService.prototype.get = function(userId) {
-    return projectDataStore.get(userId)
+ProjectService.prototype.getSummary = function(projectId) {
+    return projectDataStore.get(projectId)
+        .then(function(projects){
+            var response = {
+                id: projects[0].id,
+                name: projects[0].name,
+                createdDate: projects[0].createdDate
+            }
+            return response;
+        });
+};
+
+ProjectService.prototype.getByUserId = function(userId) {
+    return projectDataStore.getByUserId(userId)
             .then(function(projects){
                 var response = [];
                 underscore.forEach(projects, function(project){

@@ -20,7 +20,18 @@ router.post('/create', function (req, res) {
 
 router.get('/get', function(req, res){
     var userId = req.user.id;
-    projectService.get(userId)
+    projectService.getByUserId(userId)
+        .then(function(projects){
+            res.status(200).send(projects);
+        })
+        .catch(function(err){
+            res.status(200).send(err);
+        });
+});
+
+router.get('/getprojectsummary/:id', function(req, res){
+    var projectId = req.params.id;
+    projectService.getSummary(projectId)
         .then(function(projects){
             res.status(200).send(projects);
         })

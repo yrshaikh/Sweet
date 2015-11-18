@@ -12,9 +12,15 @@ angular.module("project-management").factory('ProjectService', ['$http', functio
                 data: project
             });
         },
-        getProjects: function() {
+        getAllProjects: function() {
             return $http({
                 url: '/projects/get',
+                method: 'GET'
+            });
+        },
+        getProjectDetails: function(projectId) {
+            return $http({
+                url: '/projects/getprojectsummary/' + projectId,
                 method: 'GET'
             });
         }

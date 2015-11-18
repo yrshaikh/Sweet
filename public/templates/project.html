@@ -1,26 +1,20 @@
-<div ng-show="projects.loading" class="container-fluid main">
+<div ng-show="project.loading" class="container-fluid main">
 	<div><i class="fa fa-spin fa-spinner" />&nbsp;Loading...</div>
 </div>
-<div ng-hide="projects.loading" class="container-fluid main" ng-init="init()">
+<div ng-hide="project.loading" class="container-fluid main" ng-init="init()">
 	<div class="col-md-9">
-		<h3>
-			Hello there, Let's get started.
-		</h3>		
-		<div>
-			<ul>
-				<li><a href="" ng-click="newProject();">Create your first project</a></li>
-				<li><a href="#">Complete your profile</a></li>
-				<li><a href="#">Follow us on facebook</a></li>
-				<li><a href="#">Follow us on twitter</a></li>
-			</ul>
-		</div>
+		<h4>
+			<a href="#dashboard">Projects</a>
+			<i class="fa fa-caret-right"/>
+			<a href="#project/{{project.data.id}}">{{project.data.name}}</a>
+		</h4>
 	</div>      
 	<div class="col-md-3">
 		<div class="panel panel-default projects">
 		  <div class="panel-heading">
 		    <h3 class="panel-title">
-		    	<span class="pull-left title">Your projects<span class="badge">{{projects.data.length}}</span></span>
-		    	<span class="pull-right btn btn-success btn-xs" ng-click="newProject();">+ New Project</span>
+		    	<span class="pull-left title">Summary<span class="badge">{{projects.data.length}}</span></span>
+		    	<span class="pull-right btn btn-success btn-xs" ng-click="newIssue();">+ New Issue</span>
 		    </h3>
 		  </div>
 		  <div class="panel-body">
@@ -33,7 +27,7 @@
 	    	</div>
             <div ng-if="projects.data.length > 0" ng-repeat="p in projects.data">
 	    		<span>
-                    <a href="#/project/{{p.id}}">{{p.name}}</a>
+                    <a href="#/projects/{{p.id}}/{{p.name}}">{{p.name}}</a>
                 </span>
 	    	</div>
 
