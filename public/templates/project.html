@@ -2,36 +2,83 @@
 	<div><i class="fa fa-spin fa-spinner" />&nbsp;Loading...</div>
 </div>
 <div ng-hide="project.loading" class="container-fluid main" ng-init="init()">
-	<div class="col-md-9">
-		<h4>
-			<a href="#dashboard">Projects</a>
-			<i class="fa fa-caret-right"/>
-			<a href="#project/{{project.data.id}}">{{project.data.name}}</a>
-		</h4>
-	</div>      
-	<div class="col-md-3">
-		<div class="panel panel-default projects">
-		  <div class="panel-heading">
-		    <h3 class="panel-title">
-		    	<span class="pull-left title">Summary<span class="badge">{{projects.data.length}}</span></span>
-		    	<span class="pull-right btn btn-success btn-xs" ng-click="newIssue();">+ New Issue</span>
-		    </h3>
-		  </div>
-		  <div class="panel-body">
-            <div ng-if="projects.loading">
-                Loading&nbsp;<i class="fa fa-spin fa-spinner" />
-            </div>
-	    	<div ng-if="projects.data.length == 0">
-	    		You don't have any projects yet!<br/>
-	    		<a href="" ng-click="newProject();">Create your first project.</a>
-	    	</div>
-            <div ng-if="projects.data.length > 0" ng-repeat="p in projects.data">
-	    		<span>
-                    <a href="#/projects/{{p.id}}/{{p.name}}">{{p.name}}</a>
-                </span>
-	    	</div>
-
-		  </div><!-- eof panel-body-->
-		</div><!-- eof panel-->
-	</div>      
+	<div class="col-md-12">
+		<div ng-controller="ProjectController" ng-init="init()"  class="header clearfix" ng-include src="'templates/project-header.html'"></div>
+		<div class="wrapper clearfix">
+			<div class="inner-nav" ng-include src="'templates/project-nav.html'"></div>
+			<div class="inner-content">
+				<div class="table-responsive">
+					<table class="table table-bordered">
+						<thead>
+						<tr>
+							<th>#</th>
+							<th>Table heading</th>
+							<th>Table heading</th>
+							<th>Table heading</th>
+							<th>Table heading</th>
+							<th>Table heading</th>
+							<th>Table heading</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<th scope="row">1</th>
+							<td>Table cell</td>
+							<td>Table cell</td>
+							<td>Table cell</td>
+							<td>Table cell</td>
+							<td>Table cell</td>
+							<td>Table cell</td>
+						</tr>
+						<tr>
+							<th scope="row">2</th>
+							<td>Table cell</td>
+							<td>Table cell</td>
+							<td>Table cell</td>
+							<td>Table cell</td>
+							<td>Table cell</td>
+							<td>Table cell</td>
+						</tr>
+						<tr>
+							<th scope="row">3</th>
+							<td>Table cell</td>
+							<td>Table cell</td>
+							<td>Table cell</td>
+							<td>Table cell</td>
+							<td>Table cell</td>
+							<td>Table cell</td>
+						</tr>
+						<tr>
+							<th scope="row">3</th>
+							<td>Table cell</td>
+							<td>Table cell</td>
+							<td>Table cell</td>
+							<td>Table cell</td>
+							<td>Table cell</td>
+							<td>Table cell</td>
+						</tr>
+						<tr>
+							<th scope="row">3</th>
+							<td>Table cell</td>
+							<td>Table cell</td>
+							<td>Table cell</td>
+							<td>Table cell</td>
+							<td>Table cell</td>
+							<td>Table cell</td>
+						</tr>
+						<tr>
+							<th scope="row">3</th>
+							<td>Table cell</td>
+							<td>Table cell</td>
+							<td>Table cell</td>
+							<td>Table cell</td>
+							<td>Table cell</td>
+							<td>Table cell</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

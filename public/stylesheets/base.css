@@ -32,6 +32,7 @@ body, button, input, h1, h2, h3, h4, h5, h6 {font-family: 'Montserrat', 'Segoe U
 
 /* 2. COMMON **********************************************/
 body {background: #EDEDEB;}
+a {color:#2F5B8C}
 html, body, input {font-size: 12px;}
 .body-content{ margin-top: 60px;}
 .checkbox input[type=checkbox] {margin-top: 2px;}
@@ -39,16 +40,20 @@ label {font-weight: normal;}
 .dropdown-menu>li>a {font-size: 12px;}
 .footer {margin-left: 43px;margin-top: 40px;border-top: 1px solid #C1C1C1;margin-right: 47px;color: #C1C1C1;padding: 10px;}
 .mb10 {margin-bottom: 10px;}
+.mr10 {margin-right: 10px;}
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
+.btn-success {background: #8DBC6F;border: none;border-radius:2px}
 /* 3 LAYOUTS *********************************************/
 body {padding-top: 50px;}
 .wrapper-container {width: 100%;}
 .navbar {padding-left: 25px;padding-right: 30px;}
 .navbar-inverse{background:#1F2533;border: none;}
 .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a{color:#B5B9C5}
-.main {min-height: 480px;}
+.crumb {color:#888880;}
+.crumb .leaf {display: block;float: right;margin-left: 5px;}
+.crumb .leaf:first-letter {text-transform: capitalize;}
 /* 4 DIALOGS*********************************************/
 .modal-dialog .modal-header {background: #1F2533;color: #fff;text-transform: uppercase;height: 50px}
 .modal-dialog .modal-header h3  {font-size: 18px;}
@@ -56,8 +61,9 @@ body {padding-top: 50px;}
 .modal-dialog {display: inline-block;text-align: left;vertical-align: middle;margin-top: -50px;}
 .modal-dialog .fa-close {top: 4px;position: relative;right: 4px;color: #ddd;}
 .modal-dialog .fa-close:hover {color: #fff;cursor: pointer;}
-.modal-dialog input[type=text] {width: 600px;}
-.modal-dialog .btn {width: 150px;}
+.modal-dialog .project-name {width: 600px;}
+.modal-dialog .btn {min-width: 150px;}
+.modal-dialog textarea {height: 250px;}
 @media screen and (min-width: 768px) {
   .modal:before {
     display: inline-block;
@@ -72,3 +78,18 @@ body {padding-top: 50px;}
 .projects .panel-title .title {font-size: 14px;margin-top: 3px;}
 .projects .panel-title .title .badge {margin-left: 6px;}
 
+.main {min-height: 480px;}
+.main .wrapper {width: 100%;margin: auto;}
+.main .inner-nav{width: 90px;float: left;}
+.main .inner-content{margin-left: 110px;}
+.main .inner-nav a:first-child{border-top:1px solid;border-color: #D1D1CF;}
+.main .inner-nav a {width: 100%;float: left;text-align: center;padding: 26px 10px;border-left: 1px solid;border-right: 1px solid;border-bottom: 1px solid;border-color: #D1D1CF;}
+.main .inner-nav a .fa{font-size: 20px;text-align: center;width: 100%;}
+.main .inner-nav a{color: #AEAEAC;}
+.main .inner-nav a:hover{color: #2F5B8C;text-decoration: none;}
+.main .inner-nav a.active{background: #fff;}
+.main .inner-nav a.active .fa, .main .inner-nav a.active span{color: #1F2533;}
+
+table tr {background: #fff;}
+table thead tr {background: #AEAEAC;color:#fff;}
+.table-bordered>thead>tr>th {border: none;}

@@ -10,10 +10,25 @@
 	            templateUrl: '/templates/dashboard.html',
 	            controller: 'DashboardController'
 	        })
-            .state('project', {
-	            url: '/project/:id',
+            .state('project-issues', {
+	            url: '/project/:id/issues',
 	            templateUrl: '/templates/project.html',
-	            controller: 'ProjectController'
+	            controller: 'ProjectIssuesController'
+	        })
+            .state('project-documents', {
+	            url: '/project/:id/documents',
+	            templateUrl: '/templates/project.html',
+	            controller: 'ProjectDocumentsController'
+	        })
+            .state('project-team', {
+	            url: '/project/:id/team',
+	            templateUrl: '/templates/project.html',
+	            controller: 'ProjectTeamController'
+	        })
+            .state('project-settings', {
+	            url: '/project/:id/settings',
+	            templateUrl: '/templates/project.html',
+	            controller: 'ProjectSettingsController'
 	        });
 
 	});
@@ -23,3 +38,7 @@
 <script type="text/javascript" src="/javascripts/app/controllers/new-project-controller.js"></script>
 <script type="text/javascript" src="/javascripts/app/controllers/dashboard-controller.js"></script>
 <script type="text/javascript" src="/javascripts/app/controllers/project-controller.js"></script>
+<script type="text/javascript" src="/javascripts/app/controllers/project-issues-controller.js"></script>
+<script type="text/javascript" src="/javascripts/app/controllers/project-documents-controller.js"></script>
+<script type="text/javascript" src="/javascripts/app/controllers/project-settings-controller.js"></script>
+<script type="text/javascript" src="/javascripts/app/controllers/project-team-controller.js"></script>
