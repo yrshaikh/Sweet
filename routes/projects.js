@@ -40,4 +40,16 @@ router.get('/getprojectsummary/:id', function(req, res){
         });
 });
 
+router.get('/getprojectmembers/:id', function(req, res){
+    var projectId = req.params.id;
+    projectService.getMembers(projectId)
+        .then(function(members){
+            console.log(JSON.stringify(members));
+            res.status(200).send(members);
+        })
+        .catch(function(err){
+            res.status(200).send(err);
+        });
+});
+
 module.exports = router;

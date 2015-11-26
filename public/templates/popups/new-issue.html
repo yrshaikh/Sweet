@@ -2,7 +2,7 @@
     <h3 class="modal-title pull-left">Create a new issue</h3>
     <i ng-click="cancel()" class="fa fa-close pull-right"></i>
 </div>
-<div class="modal-body">
+<div id="new-issue" class="modal-body">
     <form ng-init="init()" class="row">
         <div class="col-md-7">
             <div class="form-group">
@@ -12,7 +12,7 @@
             <div class="form-group">
                 <label>COMMENT</label>
                 <textarea class="form-control" ng-model="project.name" autofocus required=""></textarea>
-                <span class=""><i  class="fa fa-paperclip"></i>&nbsp; Drag and drop to upload or,<a href="#">Select files...</a></span>
+                <span class="dragdrop"><i  class="fa fa-paperclip"></i>&nbsp; Drag and drop to upload or, <a href="#">Select files...</a></span>
             </div>
         </div>
         <div class="col-md-5">
@@ -26,7 +26,19 @@
             </div>
             <div class="form-group">
                 <label>PRIORITY</label>
-                <input type="text" class="form-control" ng-model="project.name" autofocus required="">
+                <select id="priority" style="display: block;">
+                    <option value="high">High</option>
+                    <option value="normal">Normal</option>
+                    <option value="low">Low</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>TAGS</label>
+                <select id="tags" style="display: block;">
+                    <option value="high">High</option>
+                    <option value="normal">Normal</option>
+                    <option value="low">Low</option>
+                </select>
             </div>
         </div>
         <div class="col-md-12">

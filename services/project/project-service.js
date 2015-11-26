@@ -1,4 +1,5 @@
 var projectDataStoreJs = require('../../datastore/project-data-store');
+var accountService = require('../../services/account/account-service.js');
 var underscore = require('underscore');
 
 var projectDataStore = new projectDataStoreJs();
@@ -19,6 +20,21 @@ ProjectService.prototype.getSummary = function(projectId) {
                 createdDate: projects[0].createdDate
             }
             return response;
+        });
+};
+
+ProjectService.prototype.getMembers = function(projectId) {
+    return projectDataStore.get(projectId)
+        .then(function(projects){
+            var userIds = projects[0].users;
+            var userIds = underscore.pluck(userIds, 'id');
+            return new accountService().getUsersByUserId(userIds);
+        })
+        .then(function (users) {
+            console.log(JSON.stringify(users));
+            var u = underscore.pick(users, 'id', 'firstname', 'lastname');
+            console.log(JSON.stringify(u));
+            return u;
         });
 };
 

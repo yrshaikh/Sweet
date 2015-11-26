@@ -1,16 +1,21 @@
 angular.module('project-management').controller('ProjectIssuesController',
-	['$scope', '$http', '$modal', 'ProjectService', '$stateParams', function ($scope, $http, $modal, projectService, $stateParams) {
+	['$scope', '$http', '$modal', 'ProjectService', '$stateParams','$rootScope', function ($scope, $http, $modal, projectService, $stateParams, $rootScope) {
 
 	$scope.init = function(){
 		$scope.projectId = $stateParams.id;
-		$scope.currentPage = "issues";
+		$rootScope.$broadcast('project:tab:change',
+			{
+				id: $scope.projectId,
+				title: 'issues'
+			}
+		);
 	}
 
 	$scope.newItem = function(){
 		var modalInstance = $modal.open({
 			animation: true,
 			templateUrl: '/templates/popups/new-issue.html',
-			controller: 'NewProjectController',
+			controller: 'NewIssueController',
 			size: 'lg',
 			resolve: {
 				items: function () {

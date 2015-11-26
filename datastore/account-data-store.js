@@ -20,4 +20,8 @@ AccountDataStore.prototype.getByUsername = function(email){
         });
 }
 
+AccountDataStore.prototype.getByUserIds = function(userIds){
+    return Account.findAsync({id: { $in : userIds}});
+}
+
 module.exports = AccountDataStore;

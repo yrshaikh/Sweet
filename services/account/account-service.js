@@ -40,4 +40,11 @@ AccountService.prototype.sendForgotPasswordMail = function(email, host) {
             });
 };
 
+AccountService.prototype.getUsersByUserId = function(userIds) {
+    return accountDataStore.getByUserIds(userIds)
+        .then(function(users){
+            return users;
+        });
+};
+
 module.exports = AccountService;

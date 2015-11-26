@@ -1,15 +1,16 @@
 angular.module('project-management').controller('ProjectController',
-	['$scope', '$http', '$modal', 'ProjectService', '$stateParams', function ($scope, $http, $modal, projectService, $stateParams) {
+	['$scope', '$http', '$modal', 'ProjectService', '$rootScope', function ($scope, $http, $modal, projectService, $rootScope) {
 
 	$scope.init = function(){
-		var projectId = $stateParams.id;
-
 		$scope.project = {
 			loading: false,
 			data: []
-		}
-
-		getProjectDetails(projectId);
+		};
+		$rootScope.$on('project:tab:change', function (event, data) {
+			getProjectDetails(data.id);
+			$scope.data = data;
+			$scope.currentPage = data.title;
+		});
 	}
 
 	var getProjectDetails = function(projectId){
