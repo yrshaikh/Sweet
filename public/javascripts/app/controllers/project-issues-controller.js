@@ -2,6 +2,7 @@ angular.module('project-management').controller('ProjectIssuesController',
 	['$scope', '$http', '$modal', 'ProjectService', '$stateParams','$rootScope', function ($scope, $http, $modal, projectService, $stateParams, $rootScope) {
 
 	$scope.init = function(){
+        $scope.subNavEnabled = true;
 		$scope.projectId = $stateParams.id;
 		$rootScope.$broadcast('project:tab:change',
 			{

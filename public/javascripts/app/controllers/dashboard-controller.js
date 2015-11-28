@@ -1,12 +1,12 @@
 angular.module('project-management').controller('DashboardController', 
-	['$scope', '$http', '$modal', 'ProjectService', function ($scope, $http, $modal, projectService) {
+	['$scope', '$http', '$modal', 'ProjectService', '$rootScope', function ($scope, $http, $modal, projectService, $rootScope) {
 	
 	$scope.init = function(){
+        $scope.subNavEnabled = false;
 		$scope.projects = {
 			data: [],
 			loading: false
 		}
-
 		loadProjects();
 	}
 

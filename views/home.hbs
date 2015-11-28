@@ -1,8 +1,6 @@
 ﻿<div ng-app="project-management"  ng-cloak="">
-    <div id="second-nav" ng-controller="ProjectController" ng-init="init()" class="header clearfix" ng-include src="'templates/project-header.html'"></div>
-    <div ui-view class="container wrapper-container"></div>
+    <div ui-view class="container wrapper-container" ng-class="{'no-subnav':!subNavEnabled}"></div>
 </div>
-
 
 <script type="text/javascript">
 	var routerApp = angular.module('project-management', ['ui.bootstrap', 'ui.router']);
@@ -16,7 +14,7 @@
 	        })
             .state('project-issues', {
 	            url: '/project/:id/issues',
-	            templateUrl: '/templates/project.html',
+	            templateUrl: '/templates/issues.html',
 	            controller: 'ProjectIssuesController'
 	        })
             .state('project-documents', {
