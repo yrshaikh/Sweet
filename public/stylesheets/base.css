@@ -45,6 +45,7 @@ label {font-weight: normal;}
   display: none !important;
 }
 .btn-success {background: #7BB23D;border: 1px solid #4F8117;border-radius:2px}
+.btn-default {border: 1px solid #BFBFBF;border-radius:2px}
 .s2 {display: block;}
 /* 3 LAYOUTS *********************************************/
 body {padding-top: 50px;}
@@ -56,15 +57,20 @@ body {padding-top: 50px;}
 
 /* 3.1 NAVBARS*********************************************/
 .navbar {padding-left: 30px;padding-right: 30px;}
-.navbar-inverse{background:#353638;border: none;box-shadow: 1px 1px 1px #666;margin-bottom: 0px;}
+.navbar-inverse{background:#353638;border: none;/*box-shadow: 1px 1px 1px #666;*/margin-bottom: 0px;}
 .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a{color:#B5B9C5}
 .navbar {min-height: 36px;max-height: 34px;}
 .navbar-nav>li>a {padding-top: 10px;padding-bottom: 10px;}
 .navbar-brand {padding: 10px 10px;font-size: 14px;}
 
 /* 4 DIALOGS*********************************************/
-.modal-dialog .modal-header {background: #1F2533;color: #fff;text-transform: uppercase;height: 50px}
+.modal-dialog .modal-header {text-transform: uppercase;height: 56px}
 .modal-dialog .modal-header h3  {font-size: 18px;}
+.modal-dialog .modal-header {padding-right: 93px;}
+.modal-dialog .modal-header img {cursor: pointer;opacity: 0.6}
+.modal-dialog .modal-header img:hover {opacity: 1;}
+.modal-dialog .modal-body {margin-right: 250px;}
+.modal-header {background: #E8EEF2 !important;color:#4B4F51;border-bottom: 2px solid #B9C2C9;}
 .modal {text-align: center;}
 .modal-dialog {display: inline-block;text-align:left;vertical-align: middle;margin-top: -50px;}
 .modal-dialog .fa-close {top: 4px;position: relative;right: 4px;color: #ddd;}
@@ -72,9 +78,8 @@ body {padding-top: 50px;}
 .modal-dialog .project-name {width: 95%;}
 .modal-dialog .btn {min-width: 150px;}
 .modal-dialog textarea {height: 250px;}
-.modal-dialog {height: 95%;width: 95%;position: fixed;top: 87px;left: 70px;border-top: 2px solid #B9C2C9;}
+.modal-dialog {height: 100%;width: 100%;position: fixed;top: 86px;left: 40px;}
 .modal-content {border-radius:0px;border: none;height: 100%;}
-.modal-header {display: none;}
 .modal.fade:not(.in) .modal-dialog {
     -webkit-transform: translate3d(25%, 0, 0);
     transform: translate3d(25%, 0, 0);
@@ -87,6 +92,8 @@ body {padding-top: 50px;}
 
 .main {min-height: 480px;}
 .main .wrapper {width: 100%;margin-left: 7px;padding-right: 22px;}
+.main .wrapper .actions {margin-bottom: 10px;}
+.main .wrapper .actions .btn {margin-left: 10px;}
 
 #second-nav {background: #E8EEF2;border-bottom: 2px solid #B9C2C9;position: fixed;width: 100%;top: 37px;right: 0px;}
 #second-nav { height: 55px;padding-left: 39px;padding-right: 48px;padding-top: 8px;}
@@ -101,8 +108,20 @@ body {padding-top: 50px;}
 .inner-nav a.active .fa, .main .inner-nav a.active span{color: #4B4F51;}
 
 /* TABLE */
-table tr {background: #fff;}
+table tr {background: #fff;border-left: 1px solid #C7C5C5; border-right: 1px solid #C7C5C5;}
+table tbody td {color: #5C5F61;font-size: 13px;}
 table thead tr {color:#5D3712;background: linear-gradient(to bottom, #c9b7a1 0%,#e0c396 2%,#fde5b3 5%,#f8dba3 10%,#f8d9a1 14%,#f8d496 19%,#f8d394 21%,#f7d08c 24%,#f6cd8a 26%,#f7ce8c 31%,#f6cb87 33%,#f6cd8a 38%,#f6c982 40%,#f7cb88 43%,#f7cf88 45%,#f6cb7e 48%,#f5c77a 50%,#f6c67b 55%,#f6c880 60%,#f5c478 62%,#f5c479 64%,#f5c070 69%,#f5c275 74%,#f4be6b 76%,#f4bf6e 81%,#f4bc67 88%,#f5bd6b 93%,#f4b762 95%,#f4b75e 98%,#be8e57 100%);}
-.table-bordered>thead>tr>th {border: none;}
+table thead tr {border-left: 1px solid #E2C598;border-right: 1px solid #E2C598;border-radius: 2px;}
+table tbody tr:hover {background: #F0EDE3;color: #333;cursor: pointer;}
+.table-bordered>thead>tr>th{border: none;}
+/*.table-bordered>tbody>tr>td {border: inherit;}*/
+.table-bordered {border: 1px solid #C5C1C3;}
+.table>tbody>tr>td {padding: 12px;}
+table tbody tr {background: #F5F5F5;}
+/*table tbody tr:nth-child(odd) {background-color: #F0EDE3;}*/
+table { border-collapse: collapse; }
+tr { border: none; }
+.table-bordered>tbody>tr>td, td {border-right: solid 1px #E8DCDC;border-left: solid 1px #E8DCDC;border-bottom: solid 1px #E8DCDC;}
+td a {color: #3572b0;}
 
 #new-issue .dragdrop {padding-top: 10px;display: block;}

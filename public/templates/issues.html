@@ -1,83 +1,56 @@
 <div id="second-nav" ng-controller="ProjectController" ng-init="init()" ng-show2="subNavEnabled" class="header clearfix" ng-include src="'templates/project-header.html'"></div>
 <div ng-show="project.loading" class="container-fluid main">
-	<div><i class="fa fa-spin fa-spinner" />&nbsp;Loading...</div>
+    <div><i class="fa fa-spin fa-spinner" />&nbsp;Loading...</div>
 </div>
 <div ng-hide="project.loading" class="container-fluid main" ng-init="init()">
-	<div class="">
-		<div class="wrapper clearfix">
-			<div class="inner-content">
-				<div class="table-responsive">
-					<table class="table table-bordered">
-						<thead>
-						<tr>
-							<th>#</th>
-							<th>Table heading</th>
-							<th>Table heading</th>
-							<th>Table heading</th>
-							<th>Table heading</th>
-							<th>Table heading</th>
-							<th>Table heading</th>
-						</tr>
-						</thead>
-						<tbody>
-						<tr>
-							<th scope="row">1</th>
-							<td>Table cell</td>
-							<td>Table cell</td>
-							<td>Table cell</td>
-							<td>Table cell</td>
-							<td>Table cell</td>
-							<td>Table cell</td>
-						</tr>
-						<tr>
-							<th scope="row">2</th>
-							<td>Table cell</td>
-							<td>Table cell</td>
-							<td>Table cell</td>
-							<td>Table cell</td>
-							<td>Table cell</td>
-							<td>Table cell</td>
-						</tr>
-						<tr>
-							<th scope="row">3</th>
-							<td>Table cell</td>
-							<td>Table cell</td>
-							<td>Table cell</td>
-							<td>Table cell</td>
-							<td>Table cell</td>
-							<td>Table cell</td>
-						</tr>
-						<tr>
-							<th scope="row">3</th>
-							<td>Table cell</td>
-							<td>Table cell</td>
-							<td>Table cell</td>
-							<td>Table cell</td>
-							<td>Table cell</td>
-							<td>Table cell</td>
-						</tr>
-						<tr>
-							<th scope="row">3</th>
-							<td>Table cell</td>
-							<td>Table cell</td>
-							<td>Table cell</td>
-							<td>Table cell</td>
-							<td>Table cell</td>
-							<td>Table cell</td>
-						</tr>
-						<tr>
-							<th scope="row">3</th>
-							<td>Table cell</td>
-							<td>Table cell</td>
-							<td>Table cell</td>
-							<td>Table cell</td>
-							<td>Table cell</td>
-							<td>Table cell</td>
-						</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="">
+        <div class="wrapper clearfix">
+            <div class="inner-content">
+                <div class="clearfix actions">
+                    <button class="btn btn-default pull-right btn-sm" ng-click="newItem();"><i class="fa fa-plus"></i>&nbsp;New Issue</button>
+                    <button class="btn btn-default pull-right btn-sm"><i class="fa fa-filter"></i>&nbsp;Filter </button>
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th>State</th>
+                            <th>Priority</th>
+                            <th>Title</th>
+                            <th>Assignee</th>
+                            <th>Due Date</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Closed</td>
+                            <td>Critical</td>
+                            <td><a href="#">Email sent have bcc to yrshaikh, should be removed ASAP.</a></td>
+                            <td>Yasser Shaikh</td>
+                            <td>1st Jan 2015</td>
+                            <td><i class="fa fa-bars"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Open</td>
+                            <td>Normal</td>
+                            <td><a href="#">The login links does not work, redirects to the nortan conenct safe page.</a></td>
+                            <td>Yasser Shaikh</td>
+                            <td>Today</td>
+                            <td><i class="fa fa-bars"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Open</td>
+                            <td>Normal</td>
+                            <td><a href="#">Cannot save new issues when logged in via fake account.</a></td>
+                            <td>Unassigned</td>
+                            <td>31st Dec 2015</td>
+                            <td><i class="fa fa-bars"></i></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

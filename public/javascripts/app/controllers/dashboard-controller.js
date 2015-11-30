@@ -6,7 +6,7 @@ angular.module('project-management').controller('DashboardController',
 		$scope.projects = {
 			data: [],
 			loading: false
-		}
+		};
 		loadProjects();
 	}
 
@@ -32,11 +32,11 @@ angular.module('project-management').controller('DashboardController',
 			}
 		});
 
-		modalInstance.result.then(function (selectedItem) {
+		/*modalInstance.result.then(function (selectedItem) {
 			$scope.selected = selectedItem;
 		}, function () {
-			console.log('Modal dismissed at: ' + new Date());
-		});
+			//console.log('Modal dismissed at: ' + new Date());
+		});*/
 	}	
 }]);
 
