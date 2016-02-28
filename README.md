@@ -1,3 +1,3 @@
-﻿# One
+﻿# Sweet!
 
-Simple, effective Project management for fast moving teams
+Sweet, a Project Management App by Developers for Developers. 
