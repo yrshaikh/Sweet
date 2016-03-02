@@ -7,31 +7,14 @@
 ***********************************************************/
 
 /* 1. FONTS ***********************************************/
-/*@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,500);*/
-
-/* latin */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Montserrat-Regular'), url(fonts/montserrat-regular.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-/* latin */
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Montserrat-Bold'), url(fonts/montserrat-bold.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
-}
-
-body, button, input, h1, h2, h3, h4, h5, h6 {font-family: 'Montserrat', 'Segoe UI', Tahoma, Arial, sans-serif !important;}
-.form-control {font-size: 13px;color: #333;}
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,500);
+body, button, input, h1, h2, h3, h4, h5, h6 {font-family: 'Roboto', 'Segoe UI', Tahoma, Arial, sans-serif !important;}
+.form-control {font-size: 14px;color: #333;}
 h3 {margin-top: 0px;}
 
 /* 2. COMMON **********************************************/
-body {background: #D6DCE1;}
+/*body {background: #D6DCE1;}*/
+body {background: #fefefe;}
 a {color:#2F5B8C}
 html, body, input {font-size: 12px;}
 .body-content{ margin-top: 60px;}
@@ -51,7 +34,7 @@ label {font-weight: normal;}
 body {padding-top: 50px;}
 .wrapper-container {width: 100%;margin-top: 20px;}
 .no-subnav {margin-top: -35px;}
-.crumb {color:#90A2AB;}
+.crumb {color:#90A2AB;font-size: 14px;}
 .crumb .leaf {display: block;float: right;margin-left: 5px;}
 .crumb .leaf:first-letter {text-transform: capitalize;}
 

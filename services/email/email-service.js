@@ -1,5 +1,5 @@
 var promise = require('bluebird');
-var nodemailer = require('nodemailer');
+//var nodemailer = require('nodemailer');
 var configs = require('config');
 
 function EmailService(){	 
@@ -21,10 +21,11 @@ EmailService.prototype.sendMail = function(mailContext) {
     	html: mailContext.html
     };
 
-    var transport = nodemailer.createTransport(smtpTransportOpts);
-    var sendMail = promise.promisify(transport.sendMail, transport)
+    //var transport = nodemailer.createTransport(smtpTransportOpts);
+    //var sendMail = promise.promisify(transport.sendMail, transport)
 
-    return sendMail(mailOptions);
+    //return sendMail(mailOptions);
+    console.log("not implemented mailer");
 };
 
 module.exports = EmailService;

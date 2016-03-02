@@ -11,7 +11,7 @@ router.post('/create', function (req, res) {
     var createdByUserId = req.user.id;
     projectService.createNewProject(projectName, createdByUserId)
         .then(function(createdProject){
-            res.status(200).send(createdProject[0]);
+            res.status(200).send(createdProject);
         })
         .catch(function(err){
             res.status(200).send(err);

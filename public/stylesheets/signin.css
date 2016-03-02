@@ -1,24 +1,33 @@
-body {
+body{padding-top:0px;}
+.container {padding:0px;margin:0px;width: 100%;position:absolute;height:100%;}
+.btn {text-transform: uppercase;}
+.single-pg {position:absolute;height:100%;margin-top: -17px;width: 100%;}
+.single-pg .logo img {margin: 0 auto;height: 54px;display: block;}
+.single-pg .msg {color:#fff;}
+.single-pg .msg {
 	background-image: url('/stylesheets/images/background.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
-.btn {text-transform: uppercase;}
-.single-pg {margin-top: 105px;}
-.single-pg .logo img {margin: 0 auto;height: 54px;display: block;}
-.single-pg .msg {color:#fff;margin-top: 60px;}
-.single-pg .msg h3 {font-size: 22px;text-align: center;}
-.single-pg .msg .features ul {font-size: 18px;color: #FFC10F;text-align: center;margin-left: 40px;}
+.single-pg .msg, .single-pg .form  {float:left;height: 	100%;}
+.single-pg .msg {width: 60%;}
+.single-pg .form  {width: 40%;background:#fff;}
+.single-pg .msg .inner  {margin-top:230px;}
+.single-pg .msg h1 {font-weight: 700}
+.single-pg .msg h3 {font-size: 16px;text-align: center;font-weight: 100;}
+.single-pg .msg .features ul {font-size: 16px;color: #FFC10F;text-align: center;margin-left: 40px;}
 .single-pg .msg .features ul li {float: left;margin-left: 10px;list-style: none;}
 .single-pg .msg .features ul li:after {content: '\00B7';margin-left: 10px;}
 .single-pg .msg .features ul li:last-child:after {content: none;margin-left: 10px;}
-.single-pg .msg .features {width: 400px;margin: 0 auto;}
-.form-signin {max-width: 330px;padding: 15px;margin: 0 auto;}
+.single-pg .msg .features {width: 400px;margin: 0 auto;height: 30px;}
+.form-signin, .form-register {max-width: 330px;padding: 15px;margin: 0 auto;}
 .form-signin .username {margin-top: -10px;}
 .form-signin .password {margin-top: 15px;}
 .form-signin .error, .form-register .error {margin-top: 10px;}
-.form-register .buttons, .form-signin .buttons {margin-top: 15px;}
+.form-signin, .form-register  {margin-top:220px;}
+.form-register .buttons, .form-signin .buttons {margin-top: 15px;height: 45px;}
+.form-register .btn, .form-signin .btn {width:100%;}
 .form-register .other-links, .form-signin .other-links {margin-top:7px;}
 .form-register .input {margin-top: 10px;}
